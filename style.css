@@ -1,0 +1,275 @@
+:root {
+    --Light-red: hsl(356, 100%, 66%);
+    --Very-light-red: hsl(355, 100%, 74%);
+    --Very-dark-blue: hsl(208, 49%, 24%);
+    --White: hsl(0, 0%, 100%);
+    --Grayish-blue: hsl(240, 2%, 79%);
+    --Very-dark-grayish-blue: hsl(207, 13%, 34%);
+    --Very-dark-black-blue: hsl(240, 10%, 16%);
+
+    /* Background gradient - Intro/CTA mobile nav: */
+
+    --bg-Very-light-red: hsl(13, 100%, 72%);
+    --bg-Light-red: hsl(353, 100%, 62%);
+
+    /* Background gradient - body: */
+
+    --bg-Very-dark-gray-blue: hsl(237, 17%, 21%);
+    --bg-Very-dark-desaturated-blue: hsl(237, 23%, 32%);
+    font-family: 'Ubuntu','Overpass';
+    
+}
+html,body
+{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+}
+
+
+
+
+#red-background {
+    display: none;
+    width: 1500px;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    z-index: -1;
+    top:-550px;
+    left: -200px;
+
+}
+
+#intro-background {
+   
+    background-image: linear-gradient(to right, Var(--bg-Very-light-red),Var(--bg-Light-red));
+    z-index: 1;
+    border-bottom-left-radius: 4rem;
+    width: 100vw;
+    
+    
+}
+.header {
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: .5rem;
+    padding-top: 3rem;
+    gap: 1rem;
+    
+    
+}
+.left-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    padding-left: 5rem;
+}
+.right-header {
+    padding-right: 5rem;
+    gap: 1rem;
+}
+
+.link {
+    background: none;
+    border: none;
+    text-decoration: none;
+    font-family: 'ubuntu';
+    font-size: 16px;
+    cursor: pointer;
+    padding:0;
+    color: var(--White);
+    opacity: 0.7;
+    
+}
+
+.link:hover {
+    text-decoration: underline;
+    color: var(--White);
+}
+
+.dropdown {
+    position: relative;
+}
+.dropdown-menu {
+    position: absolute;
+    left: 0;
+    top: calc(100% + .50rem);
+    background-color: var(--White);
+    padding: .75rem;
+    width: 90px;
+    border-radius: .25rem;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.6);
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-10px);
+    transition: opacity 100ms ease-in-out, transform 150ms ease-in-out;
+    
+}
+.company-dropdown-items {
+    display: flex;
+    flex-direction: column ;
+    justify-content: center;
+    align-items: left;
+    gap: .5rem;
+}
+
+.dropdown.active > .link + .dropdown-menu {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+.dropdown-item {
+    color: var(--Very-dark-grayish-blue);
+    font-size: 12px;
+}
+
+.dropdown-item:hover {
+    font-weight: bold;
+
+}
+#login {
+    color: var(--White);
+    opacity: 0.7;
+    padding-right: 3rem;
+}
+#login:hover {
+    cursor: pointer;
+}
+
+#sign-up {
+    border: 0;
+    color: var(--bg-Light-red);
+    font-weight: 300;
+    font-family: 'ubuntu';
+    border-radius: 30px;
+    padding: 10px 30px;
+}
+
+#sign-up:hover{
+    cursor: pointer;
+}
+#sign-up:active {
+    background-color: var(--Very-light-red);
+    color: var(--White);
+}
+
+
+.intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 75px;
+    padding-bottom: 75px;
+    color: var(--White);
+    gap: 1rem;
+}
+h1{
+    margin: 0;
+    font-family: 'ubuntu';
+    font-weight: 400;
+    font-size: 50px;
+}
+p {
+    color: var(--Very-dark-grayish-blue);
+    font-weight: 300;
+    opacity: 0.7;
+    line-height: 1.7rem;
+}
+
+.grayish-blue {
+    color: var(--White);
+}
+.intro-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    
+}
+#start-for-free {
+    border: 0;
+    color: var(--bg-Light-red);
+    font-weight: 300;
+    font-family: 'ubuntu';
+    border-radius: 30px;
+    padding: 10px 20px;
+}
+
+#start-for-free:hover{
+    cursor: pointer;
+}
+#start-for-free:active {
+    background-color: var(--Very-light-red);
+    color: var(--White);
+}
+
+#learn-more {
+    border: 1px solid var(--White);
+    background-color: rgba(0,0,0,0);
+    font-weight: 300;
+    font-family: 'ubuntu';
+    border-radius: 30px;
+    padding: 10px 20px;
+    color: var(--White);
+}
+#learn-more:hover {
+    cursor: pointer;
+}
+#learn-more:active {
+    background-color: var(--White);
+    color: var(--Very-light-red);
+}
+
+.block-two-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+}
+#graph {
+    width: 65vw;
+    margin-right: -20vw;
+    margin-top: -10vh;
+}
+.block-two-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.left-content {
+    margin-top: -10vh;
+    margin-left: 5rem;
+
+}
+.block-three {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to left, Var(--bg-Very-dark-desaturated-blue) , Var(--bg-Very-dark-gray-blue));
+    height: 400px;
+    border-bottom-left-radius: 4rem;
+    border-top-right-radius: 4rem;
+    gap: 1rem;
+}
+.block-three-title {
+    color: var(--White);
+}
+
+#phones {
+   margin-top: 35px;
+   padding: 0;
+   width: 50vw;
+   margin-left: 3rem;
+}
+
+.block-three-right-content {
+    margin-right: 5rem;;
+}
