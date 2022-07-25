@@ -161,6 +161,7 @@ h2 {
     font-family: 'ubuntu';
     border-radius: 30px;
     padding: 10px 30px;
+    background-color: var(--White);
 }
 
 #sign-up:hover{
@@ -208,6 +209,7 @@ p {
 #start-for-free {
     border: 0;
     color: var(--bg-Light-red);
+    background-color: var(--White);
     font-weight: 300;
     font-family: 'ubuntu';
     border-radius: 30px;
