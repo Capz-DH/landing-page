@@ -337,6 +337,7 @@ p {
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    width: 100px;
 
 }
 
@@ -345,4 +346,10 @@ p {
   height: 40px;
   margin-top:21.28px;
   margin-bottom:21.28px;
+}
+
+
+.footer-item:hover {
+    font-weight: bold;
+
 }
