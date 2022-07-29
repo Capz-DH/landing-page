@@ -20,7 +20,7 @@
     
 }
 * {
-    
+
 }
 html,body
 {
@@ -31,6 +31,20 @@ html,body
     overflow-x: hidden; 
 }
 
+@media only screen and (min-width: 900px) and (max-width: 2160px) {
+.mobile-logo {
+    display: none;
+}
+.mobile-menu {
+        display:flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: .5rem;
+        padding-top: 3rem;
+        gap: 1rem;
+}
+        
+    
 h3 {
     font-weight: 300;
     font-size: 30px;
@@ -65,12 +79,7 @@ h2 {
     
 }
 .header {
-    display:flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: .5rem;
-    padding-top: 3rem;
-    gap: 1rem;
+    
     
     
 }
@@ -351,5 +360,199 @@ p {
 
 .footer-item:hover {
     font-weight: bold;
+
+}
+}
+
+@media only screen and (min-width: 300px) and (max-width: 900px) {
+
+
+    #intro-background {
+   
+        background-image: linear-gradient(to right, Var(--bg-Very-light-red),Var(--bg-Light-red));
+        z-index: 1;
+        border-bottom-left-radius: 4rem;
+        width: 100vw;
+        height: 600px;
+        
+        
+    }
+
+    .desktop-logo {
+        display: none;
+    }
+
+.header {
+    display:flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: .5rem;
+        padding-top: 3rem;
+        gap: 1rem;
+}
+.link {
+    background: none;
+    border: none;
+    text-decoration: none;
+    font-family: 'ubuntu';
+    font-size: 16px;
+    cursor: pointer;
+    padding:0;
+    color: var(--White);
+    opacity: 0.7;
+    
+}
+
+.link:hover {
+    text-decoration: underline;
+    color: var(--White);
+}
+
+.dropdown {
+    position: relative;
+}
+.dropdown-menu {
+    position: absolute;
+    left: 0;
+    top: calc(100% + .50rem);
+    background-color: var(--White);
+    padding: .75rem;
+    width: 90px;
+    border-radius: .25rem;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.6);
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-10px);
+    transition: opacity 100ms ease-in-out, transform 150ms ease-in-out;
+    
+}
+.company-dropdown-items {
+    display: flex;
+    flex-direction: column ;
+    justify-content: center;
+    align-items: left;
+    gap: .5rem;
+}
+
+.dropdown.active > .link + .dropdown-menu {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+.dropdown-item {
+    color: var(--Very-dark-grayish-blue);
+    font-size: 12px;
+}
+
+.dropdown-item:hover {
+    font-weight: bold;
+
+}
+#login {
+    color: var(--White);
+    opacity: 0.7;
+    padding-right: 3rem;
+}
+#login:hover {
+    cursor: pointer;
+}
+
+#sign-up {
+    border: 0;
+    color: var(--bg-Light-red);
+    font-weight: 300;
+    font-family: 'ubuntu';
+    border-radius: 30px;
+    padding: 10px 30px;
+    background-color: var(--White);
+}
+
+#sign-up:hover{
+    cursor: pointer;
+}
+#sign-up:active {
+    background-color: var(--Very-light-red);
+    color: var(--White);
+}
+
+
+.intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 75px;
+    padding-bottom: 75px;
+    color: var(--White);
+    gap: 1rem;
+}
+h1{
+    margin: 0;
+    font-family: 'ubuntu';
+    font-weight: 400;
+    font-size: 28px;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    text-align: center;
+
+}
+p {
+    color: var(--Very-dark-grayish-blue);
+    font-weight: 300;
+    opacity: 0.7;
+    line-height: 1.7rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    font-size: 16px;
+
+}
+
+.grayish-blue {
+    color: var(--White);
+    text-align: center;
+}
+.intro-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    
+}
+#start-for-free {
+    border: 0;
+    color: var(--bg-Light-red);
+    background-color: var(--White);
+    font-weight: 300;
+    font-family: 'ubuntu';
+    border-radius: 30px;
+    padding: 10px 20px;
+}
+
+#start-for-free:hover{
+    cursor: pointer;
+}
+#start-for-free:active {
+    background-color: var(--Very-light-red);
+    color: var(--White);
+}
+
+#learn-more {
+    border: 1px solid var(--White);
+    background-color: rgba(0,0,0,0);
+    font-weight: 300;
+    font-family: 'ubuntu';
+    border-radius: 30px;
+    padding: 10px 20px;
+    color: var(--White);
+}
+#learn-more:hover {
+    cursor: pointer;
+}
+#learn-more:active {
+    background-color: var(--White);
+    color: var(--Very-light-red);
+}
+
 
 }
